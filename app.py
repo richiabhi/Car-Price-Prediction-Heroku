@@ -5,11 +5,9 @@ import pickle
 from flask import request
 app = Flask(__name__)
 
-model = pickle.load(open(
-    "C:/Users/Abhishek/Desktop/ML/Vehicle_Price_prediction/env/model.pkl", "rb"))
+model = pickle.load(open("model.pkl", "rb"))
 
-car = pd.read_csv(
-    "C:/Users/Abhishek/Desktop/ML/Vehicle_Price_prediction/env/cardata.csv")
+car = pd.read_csv("cardata.csv")
 
 
 @app.route('/')
